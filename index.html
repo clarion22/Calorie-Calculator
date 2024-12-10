@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise Calorie Calculator</title>
+  <link rel="stylesheet" href="dist/styles.css" />
+  <script src="js/calculator.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/heroicons@2.0.13/dist/heroicons.min.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  
+</head>
+<body class="bg-blue-200">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4">
+    <div class="flex flex-col sm:flex-row items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="files/CalorieLogo.png" alt="Calorie Logo" class="h-8 w-auto">
+        </a>
+      </div>
+      <!-- Navigation -->
+      <nav>
+        <ul class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0">
+          <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
+          <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="px-4 sm:px-8 py-8">
+    <form id="calculatorForm" class="max-w-xl mx-auto grid grid-cols-1 gap-6 rounded-xl bg-white p-6 shadow-md">
+      <div class="text-center">
+        <h1 class="text-2xl sm:text-3xl font-bold text-blue-400 uppercase">Exercise Calorie Calculator</h1>
+        <p class="text-gray-500">Calculate how long you need to exercise to burn calories!</p>
+      </div>
+
+      <!-- Weight Section -->
+      <div class="flex flex-col">
+        <label for="weight" class="text-lg font-bold text-gray-600">Your Weight:</label>
+        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <input
+            type="number"
+            id="weight"
+            name="weight"
+            placeholder="Enter your weight"
+            required
+            class="w-full sm:w-2/3 rounded border-gray-300 shadow p-3 text-sm placeholder-gray-500 outline-none focus:border-blue-400"
+          />
+          <fieldset class="flex justify-evenly bg-white border border-gray-300 rounded-lg shadow-md w-full sm:w-1/3">
+            <legend class="sr-only">Weight Unit</legend>
+            <div class="flex-1">
+              <input id="weightLbs" class="peer hidden" type="radio" name="weightUnit" value="lbs" checked />
+              <label
+                for="weightLbs"
+                class="cursor-pointer text-gray-700 peer-checked:bg-blue-400 peer-checked:text-white block text-center w-full py-2 rounded-md"
+              >
+                lbs
+              </label>
+            </div>
+            <div class="flex-1">
+              <input id="weightKg" class="peer hidden" type="radio" name="weightUnit" value="kg" />
+              <label
+                for="weightKg"
+                class="cursor-pointer text-gray-700 peer-checked:bg-blue-400 peer-checked:text-white block text-center w-full py-2 rounded-md"
+              >
+                kg
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- Height Section -->
+      <div class="flex flex-col">
+        <label for="height" class="text-lg font-bold text-gray-600">Your Height:</label>
+        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <input
+            type="number"
+            id="height"
+            name="height"
+            placeholder="Enter your height"
+            required
+            class="w-full sm:w-2/3 rounded border-gray-300 shadow p-3 text-sm placeholder-gray-500 outline-none focus:border-blue-400"
+          />
+          <fieldset class="flex justify-evenly bg-white border border-gray-300 rounded-lg shadow-md w-full sm:w-1/3">
+            <legend class="sr-only">Height Unit</legend>
+            <div class="flex-1">
+              <input id="heightInches" class="peer hidden" type="radio" name="heightUnit" value="inches" checked />
+              <label
+                for="heightInches"
+                class="cursor-pointer text-gray-700 peer-checked:bg-blue-400 peer-checked:text-white block text-center w-full py-2 rounded-md"
+              >
+                in
+              </label>
+            </div>
+            <div class="flex-1">
+              <input id="heightCm" class="peer hidden" type="radio" name="heightUnit" value="cm" />
+              <label
+                for="heightCm"
+                class="cursor-pointer text-gray-700 peer-checked:bg-blue-400 peer-checked:text-white block text-center w-full py-2 rounded-md"
+              >
+                cm
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- Gender Section -->
+      <div class="flex flex-col">
+        <label class="text-lg font-bold text-gray-600">Gender:</label>
+        <fieldset class="flex justify-evenly bg-white border border-gray-300 rounded-lg shadow-md">
+          <legend class="sr-only">Select Gender</legend>
+          <div class="flex-1">
+            <input id="male" class="peer hidden" type="radio" name="gender" value="male" checked />
+            <label
+              for="male"
+              class="cursor-pointer text-gray-700 peer-checked:bg-blue-400 peer-checked:text-white block text-center w-full py-2 rounded-md"
+            >
+              Male
+            </label>
+          </div>
+          <div class="flex-1">
+            <input id="female" class="peer hidden" type="radio" name="gender" value="female" />
+            <label
+              for="female"
+              class="cursor-pointer text-gray-700 peer-checked:bg-blue-400 peer-checked:text-white block text-center w-full py-2 rounded-md"
+            >
+              Female
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Other Sections (Age, Calories, Exercise Group) -->
+      <div class="flex flex-col">
+        <label for="age" class="text-lg font-bold text-gray-600">Your Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="Enter your age"
+          required
+          class="w-full rounded border-gray-300 shadow p-3 text-sm placeholder-gray-500 outline-none focus:border-blue-400"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="calories" class="text-lg font-bold text-gray-600">Calories to Burn:</label>
+        <input
+          type="number"
+          id="calories"
+          name="calories"
+          placeholder="Enter calories to burn"
+          required
+          class="w-full rounded border-gray-300 shadow p-3 text-sm placeholder-gray-500 outline-none focus:border-blue-400"
+        />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="exerciseGroup" class="text-lg font-bold text-gray-600">Exercise Group:</label>
+        <select
+          id="exerciseGroup"
+          name="exerciseGroup"
+          class="w-full rounded border-gray-300 shadow p-3 text-sm placeholder-gray-500 outline-none focus:border-blue-400"
+        >
+          <option value="all">All</option>
+          <option value="cardio">Cardio</option>
+          <option value="strength">Strength Training</option>
+          <option value="everyday">Everyday Activities</option>
+          <option value="sports">Sports</option>
+        </select>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0 sm:space-x-4">
+        <button
+          type="submit"
+          class="w-full sm:w-auto rounded-lg bg-blue-500 px-4 py-2 text-white font-bold hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300"
+        >
+          Calculate
+        </button>
+        <button
+          type="button"
+          id="clearButton"
+          class="w-full sm:w-auto rounded-lg bg-teal-400 px-4 py-2 text-white font-bold hover:bg-teal-500 focus:outline-none focus:ring focus:ring-teal-300"
+        >
+          Clear
+        </button>
+      </div>
+
+      <!-- Results Section -->
+      <div id="resultsSection" class="mt-6 hidden">
+        <h2 class="text-lg sm:text-xl font-bold text-gray-600">Your Results:</h2>
+        <ul id="resultsList" class="mt-4 space-y-2"></ul>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

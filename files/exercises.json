@@ -1,0 +1,158 @@
+[
+    {
+      "name": "Walking (2 mph - slow pace)",
+      "met": 2.5,
+      "group": "cardio"
+    },
+    {
+      "name": "Walking (3 mph - moderate pace)",
+      "met": 3.3,
+      "group": "cardio"
+    },
+    {
+      "name": "Walking (4 mph - brisk pace)",
+      "met": 4.8,
+      "group": "cardio"
+    },
+    {
+      "name": "Walking (5 mph - very brisk pace)",
+      "met": 8.0,
+      "group": "cardio"
+    },
+    {
+      "name": "Running (5 mph - slow jog)",
+      "met": 7.5,
+      "group": "cardio"
+    },
+    {
+      "name": "Running (6 mph - moderate jog)",
+      "met": 9.8,
+      "group": "cardio"
+    },
+    {
+      "name": "Running (7 mph - fast run)",
+      "met": 11.0,
+      "group": "cardio"
+    },
+    {
+      "name": "Running (8 mph - very fast run)",
+      "met": 11.8,
+      "group": "cardio"
+    },
+    {
+      "name": "Running (10 mph - sprinting)",
+      "met": 14.5,
+      "group": "cardio"
+    },
+    {
+        "name": "Cycling (light effort, <10 mph)",
+        "met": 4.0,
+        "group": "cardio"
+      },
+      {
+        "name": "Cycling (moderate effort, 10-12 mph)",
+        "met": 6.8,
+        "group": "cardio"
+      },
+      {
+        "name": "Cycling (vigorous effort, >16 mph)",
+        "met": 12.0,
+        "group": "cardio"
+      },
+    {
+      "name": "Strength training (light effort - bodyweight exercises)",
+      "met": 3.5,
+      "group": "strength"
+    },
+    {
+      "name": "Strength training (medium effort - moderate weights)",
+      "met": 6.0,
+      "group": "strength"
+    },
+    {
+      "name": "Strength training (hard effort - heavy lifting)",
+      "met": 8.0,
+      "group": "strength"
+    },
+    {
+      "name": "House cleaning (general)",
+      "met": 3.5,
+      "group": "everyday"
+    },
+    {
+        "name": "Basketball (shooting hoops)",
+        "met": 4.5,
+        "group": "sports"
+      },
+      {
+        "name": "Basketball (game play)",
+        "met": 6.5,
+        "group": "sports"
+      },
+      {
+        "name": "Soccer (casual game)",
+        "met": 7.0,
+        "group": "sports"
+      },
+      {
+        "name": "Soccer (competitive game)",
+        "met": 10.0,
+        "group": "sports"
+      },
+      {
+        "name": "Tennis (doubles)",
+        "met": 5.0,
+        "group": "sports"
+      },
+      {
+        "name": "Tennis (singles)",
+        "met": 8.0,
+        "group": "sports"
+      },
+      {
+        "name": "Volleyball (recreational)",
+        "met": 3.0,
+        "group": "sports"
+      },
+      {
+        "name": "Volleyball (competitive)",
+        "met": 6.0,
+        "group": "sports"
+      },
+      {
+        "name": "Swimming (leisurely pace)",
+        "met": 6.0,
+        "group": "sports"
+      },
+      {
+        "name": "Swimming (freestyle, vigorous effort)",
+        "met": 9.8,
+        "group": "sports"
+      },
+      {
+        "name": "Baseball/Softball (general)",
+        "met": 5.0,
+        "group": "sports"
+      },
+      {
+        "name": "Gardening (general)",
+        "met": 4.0,
+        "group": "everyday"
+      },
+      {
+        "name": "Vacuuming",
+        "met": 3.3,
+        "group": "everyday"
+      },
+      {
+        "name": "Laundry (folding and putting away)",
+        "met": 2.0,
+        "group": "everyday"
+      },
+      {
+        "name": "Climbing stairs (general)",
+        "met": 4.0,
+        "group": "everyday"
+      }
+  ]
+  
